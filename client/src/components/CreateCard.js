@@ -1,7 +1,26 @@
+import styled from 'styled-components/macro'
+import Button from './Button'
 
-  import styled from 'styled-components/macro'
-    
-  export default function CreateCard () {
-      return <div>CreateCard</div>
-  }
-        
+export default function CreateCard() {
+  return (
+    <Wrapper>
+      <Button>&lt; back</Button>
+      <form>
+        <label>
+          Text
+          <input type="textarea"></input>
+        </label>
+        <label>
+          Author
+          <input type="text"></input>
+        </label>
+        <Button>Create card</Button>
+      </form>
+    </Wrapper>
+  )
+}
+
+const Wrapper = styled.section`
+  display: grid;
+  gap: 20px;
+`
